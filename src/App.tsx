@@ -1,54 +1,19 @@
+import Actions from "./components/Actions/Actions";
+import Display from "./components/Display/Display";
+import Info from "./components/Info/Info";
+import Keyboard from "./components/Keyboard/Keyboard";
+
 const App = (): JSX.Element => {
   return (
     <div className="container">
-      <span className="message">Calling...</span>
+      <Info />
       <main className="phone">
         <div className="keyboard-container">
-          <ol className="keyboard">
-            <li>
-              <button className="key">1</button>
-            </li>
-            <li>
-              <button className="key">2</button>
-            </li>
-            <li>
-              <button className="key">3</button>
-            </li>
-            <li>
-              <button className="key">4</button>
-            </li>
-            <li>
-              <button className="key">5</button>
-            </li>
-            <li>
-              <button className="key">6</button>
-            </li>
-            <li>
-              <button className="key">7</button>
-            </li>
-            <li>
-              <button className="key">8</button>
-            </li>
-            <li>
-              <button className="key">9</button>
-            </li>
-            <li>
-              <button className="key">0</button>
-            </li>
-            <li>
-              <button className="key big">delete</button>
-            </li>
-          </ol>
+          <Keyboard />
         </div>
         <div className="actions">
-          <span className="number">667359961</span>
-
-          <a href="call" className="call">
-            Call
-          </a>
-          <a href="hang-up" className="hang active">
-            Hang up
-          </a>
+          <Display />
+          <Actions />
         </div>
       </main>
     </div>
