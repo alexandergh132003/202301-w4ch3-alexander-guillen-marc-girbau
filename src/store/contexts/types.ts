@@ -1,5 +1,8 @@
 interface PhoneContextStructure {
-  phoneNumber: number;
+  phoneNumber: string;
+  isCalling: boolean;
+  appendNumber: (key: string) => void;
+  deletePhoneNumber: () => void;
 }
 
 export default PhoneContextStructure;
