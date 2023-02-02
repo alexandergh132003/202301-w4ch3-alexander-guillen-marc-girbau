@@ -25,8 +25,9 @@ const PhoneContextProvider = ({
   return (
     <PhoneContext.Provider
       value={{ phoneNumber, appendNumber, deletePhoneNumber }}
-      children={children}
-    ></PhoneContext.Provider>
+    >
+      {children}
+    </PhoneContext.Provider>
   );
 };
 
