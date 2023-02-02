@@ -22,6 +22,8 @@ const Actions = () => {
     }
 
     setIsCallingTrue();
+
+    setTimeout(setIsCallingFalse, 5000);
   };
 
   const handleOnClickEventFalse = (
