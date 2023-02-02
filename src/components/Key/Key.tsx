@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import PhoneContext from "../../store/contexts/PhoneContext";
+import "./Key.css";
 
 interface KeyProps {
   className: string;
@@ -7,9 +8,8 @@ interface KeyProps {
 }
 
 const Key = ({ className, text }: KeyProps): JSX.Element => {
-  const { appendNumber } = useContext(PhoneContext);
-
-  const { deletePhoneNumber } = useContext(PhoneContext);
+  const { appendNumber, deletePhoneNumber, isCalling } =
+    useContext(PhoneContext);
 
   const getAction = (text: string): void => {
     if (text === "delete") {
@@ -21,7 +21,11 @@ const Key = ({ className, text }: KeyProps): JSX.Element => {
 
   return (
     <li>
-      <button className={`key ${className}`} onClick={() => getAction(text)}>
+      <button
+        className={`key ${className}`}
+        onClick={() => getAction(text)}
+        disabled={isCalling}
+      >
         {text}
       </button>
     </li>
