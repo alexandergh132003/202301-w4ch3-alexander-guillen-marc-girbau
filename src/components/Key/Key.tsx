@@ -12,11 +12,7 @@ const Key = ({ className, text }: KeyProps): JSX.Element => {
     useContext(PhoneContext);
 
   const getAction = (text: string): void => {
-    if (text === "delete") {
-      deletePhoneNumber();
-    } else {
-      appendNumber(text);
-    }
+    text === "delete" ? deletePhoneNumber() : appendNumber(text);
   };
 
   return (
