@@ -28,7 +28,7 @@
 
 ## INFO
 
-- Shows the 'is calling' status
+- Shows the 'isCalling' status
 
 ## DISPLAY
 
