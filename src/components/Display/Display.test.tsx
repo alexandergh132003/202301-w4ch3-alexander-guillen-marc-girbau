@@ -11,6 +11,9 @@ describe("Given a Display component", () => {
 
       const PhoneContextNum: PhoneContextStructure = {
         phoneNumber: number,
+        isCalling: true,
+        setIsCallingFalse: () => {},
+        setIsCallingTrue: () => {},
         appendNumber: () => {},
         deletePhoneNumber: () => {},
       };

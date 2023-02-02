@@ -9,6 +9,7 @@ const PhoneContextProvider = ({
   children,
 }: PhoneContextProviderProps): JSX.Element => {
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [isCalling, setIsCalling] = useState(false);
 
   const appendNumber = (key: string): void => {
     if (phoneNumber.length >= 9) {
@@ -22,9 +23,24 @@ const PhoneContextProvider = ({
     setPhoneNumber("");
   };
 
+  const setIsCallingTrue = (): void => {
+    setIsCalling(true);
+  };
+
+  const setIsCallingFalse = (): void => {
+    setIsCalling(false);
+  };
+
   return (
     <PhoneContext.Provider
-      value={{ phoneNumber, appendNumber, deletePhoneNumber }}
+      value={{
+        phoneNumber,
+        isCalling,
+        setIsCallingFalse,
+        setIsCallingTrue,
+        appendNumber,
+        deletePhoneNumber,
+      }}
     >
       {children}
     </PhoneContext.Provider>
