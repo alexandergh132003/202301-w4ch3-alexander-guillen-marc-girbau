@@ -29,6 +29,7 @@ const PhoneContextProvider = ({
 
   const setIsCallingFalse = (): void => {
     setIsCalling(false);
+    setPhoneNumber("");
   };
 
   return (
