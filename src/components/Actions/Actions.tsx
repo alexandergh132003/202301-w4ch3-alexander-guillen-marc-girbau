@@ -16,6 +16,11 @@ const Actions = () => {
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     event.preventDefault();
+
+    if (phoneNumber.length < 9) {
+      return;
+    }
+
     setIsCallingTrue();
   };
 
