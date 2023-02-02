@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import PhoneContext from "../../store/contexts/PhoneContext";
-import PhoneContextProvider from "../PhoneContextProvider/PhoneContextProvider";
 import Key from "./Key";
 
 describe("Given the Key component", () => {
@@ -21,11 +20,16 @@ describe("Given the Key component", () => {
       const text = "3";
       const action = jest.fn();
 
+      const data = {
+        phoneNumber: "7",
+        appendNumber: action,
+        deletePhoneNumber: () => {},
+      };
+
       render(
-        <PhoneContextProvider>
+        <PhoneContext.Provider value={data}>
           <Key className="" text={text} />
-          <PhoneContext.Consumer>{action}</PhoneContext.Consumer>
-        </PhoneContextProvider>
+        </PhoneContext.Provider>
       );
 
       const keyButton = screen.getByRole("button", { name: "3" });
