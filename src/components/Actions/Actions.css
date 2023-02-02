@@ -1,0 +1,13 @@
+.actions .active {
+  cursor: pointer;
+  opacity: 1;
+}
+.actions a.active:hover {
+  transform: scale(1);
+}
+.actions .call {
+  background-color: #00886a;
+}
+.actions .hang {
+  background-color: #b6002e;
+}
