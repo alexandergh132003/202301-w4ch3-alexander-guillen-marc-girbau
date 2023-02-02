@@ -22,6 +22,9 @@ describe("Given the Key component", () => {
 
       const data = {
         phoneNumber: "7",
+        isCalling: true,
+        setIsCallingTrue: () => {},
+        setIsCallingFalse: () => {},
         appendNumber: action,
         deletePhoneNumber: () => {},
       };
