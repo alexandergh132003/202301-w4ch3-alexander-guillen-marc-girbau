@@ -3,14 +3,14 @@
 ## DATA LAYER
 
 - Phone number
-- Is calling (boolean)
+- isCalling (boolean)
 
 ## DATA MODIFICATIONS
 
 - Add digit to phone number
 - Clear phone number
-- Set 'Is calling' (true)
-- Set 'Is calling' (false)
+- Set 'isCalling' (true)
+- Set 'isCalling' (false)
 
 # COMPONENTS
 
@@ -25,7 +25,7 @@
 
 ## INFO
 
-- Shows the 'is calling' status
+- Shows the 'isCalling' status
 
 ## DISPLAY
 
