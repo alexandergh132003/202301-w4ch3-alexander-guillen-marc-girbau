@@ -15,14 +15,14 @@ describe("Given the Key component", () => {
     });
   });
 
-  describe("When it clicked", () => {
+  describe("When clicked", () => {
     test("Then it should call the function", () => {
       const text = "3";
       const action = jest.fn();
 
       const data = {
         phoneNumber: "7",
-        isCalling: true,
+        isCalling: false,
         setIsCallingTrue: () => {},
         setIsCallingFalse: () => {},
         appendNumber: action,
