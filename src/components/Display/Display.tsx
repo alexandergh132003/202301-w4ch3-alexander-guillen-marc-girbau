@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import PhoneContext from "../../store/contexts/PhoneContext";
+import "./Display.css";
 
 const Display = (): JSX.Element => {
   const { phoneNumber } = useContext(PhoneContext);
